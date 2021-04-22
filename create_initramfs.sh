@@ -28,7 +28,9 @@ WGET="wget -q"
 rcS_url="https://raw.githubusercontent.com/buildroot/buildroot/master/package/initscripts/init.d/rcS"
 rcK_url="https://raw.githubusercontent.com/buildroot/buildroot/master/package/initscripts/init.d/rcK"
 network_url="https://raw.githubusercontent.com/buildroot/buildroot/master/package/ifupdown-scripts/S40network"
-urandom_url="https://raw.githubusercontent.com/buildroot/buildroot/master/package/initscripts/init.d/S20urandom"
+#replace broken links
+#urandom_url="https://raw.githubusercontent.com/buildroot/buildroot/master/package/initscripts/init.d/S20urandom"
+urandom_url="https://github.com/zhuangjianjack/rpi2-buildroot-emu/blob/master/system/skeleton/etc/init.d/S20urandom"
 passwd_url="https://raw.githubusercontent.com/buildroot/buildroot/master/system/skeleton/etc/passwd"
 shadow_url="https://raw.githubusercontent.com/buildroot/buildroot/master/system/skeleton/etc/shadow"
 group_url="https://raw.githubusercontent.com/buildroot/buildroot/master/system/skeleton/etc/group"
@@ -149,7 +151,9 @@ elif [[ "${ARCH}" == "x86_64" ]] ; then
 	pkgurl=https://dl.fedoraproject.org/pub/fedora/linux/releases/29/Everything/x86_64/os/Packages/b/${pkg}
 elif [[ "${ARCH}" == "arm" ]] ; then
 	pkg=busybox-1.28.3-2.fc29.armv7hl.rpm
-	pkgurl=https://dl.fedoraproject.org/pub/fedora/linux/releases/29/Everything/armhfp/os/Packages/b/${pkg}
+#replace broken link
+#	pkgurl=https://dl.fedoraproject.org/pub/fedora/linux/releases/29/Everything/armhfp/os/Packages/b/${pkg}
+	pkgurl=https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/29/Everything/armhfp/os/Packages/b/${pkg}
 else
 	usage
 fi
